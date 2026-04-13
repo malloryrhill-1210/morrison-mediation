@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,  minimum-scale=5.0,"/>
+    <title>Morrison Mediation</title>
+    <!-- TODO: add dynamic style generation -->
+    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="stylesheet" href="../static/about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <script>
+        fetch("../templates/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header").innerHTML = data;
+          });
+      </script>
+    </div>
+
+    <div class="content-wrapper">
+      <h1 class="title-profile">Sarah Morrison, Esquire</h1>
+      <div class="profile-about-wrapper">
+        <div class="about-img">
+          <img class="img" src="../assets/about_pic2.jpeg" alt="about pic1" />
+        </div>
+        <div class="about-text">
+          <h2>About Sarah Morrison</h2>
+          <p class="about-p-profile">
+            Sarah Morrison is a trained mediator with many years of experience
+            in settlement negotiations. Particular areas of legal knowledge and
+            experience include: litigation, environmental law, consumer laws
+            including the Unfair Competition Law, discrimination and civil
+            rights laws, land use and property law.
+          </p>
+        </div>
+      </div>
+
+      <div class="background">
+        <div class="background-top">
+          <h3>Background</h3>
+          <hr />
+        </div>
+        <div class="wrapper">
+          <div class="text">
+            <p>
+              Sarah Morrison is a thoughtful leader and dedicated lawyer. Having
+              30 years of experience. She's the woman for the job.
+            </p>
+            <div><a href="#" class="btn">Download CV</a></div>
+          </div>
+          <div class="profile-card">
+            <div class="expandable">
+              <button class="expand-btn">
+                Professional Experience <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="expand-content">
+                <p>
+                  MVP Panel Member - Los Angeles Superior Court MVP Panel
+                  (2020-Present)
+                </p>
+                <p>
+                  Resolve Los Angeles County Superior Court - Settlement Officer
+                  (2017-2020)
+                </p>
+                <p>
+                  Center for Dispute Resolution Panel - Mediator in Ventura
+                  County Superior Court Small Claims - (2015-2017)
+                </p>
+                <p>
+                  Los Angeles County Bar Association ADR Section Member -
+                  (2015-2017)
+                </p>
+                <p>
+                  California Attorney General's Office - Supervising Deputy
+                  Attorney General - (2014-2025)
+                </p>
+                <p>
+                  California Attorney General's Office - Deputy Attorney General
+                  - (1995-2014)
+                </p>
+              </div>
+            </div>
+
+            <div class="expandable">
+              <button class="expand-btn">
+                Education <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="expand-content">
+                <p>JD - Harvard Law School - (1960-1963)</p>
+                <p>BA in Government - Pomona College - (1956-1960)</p>
+              </div>
+            </div>
+
+            <div class="expandable">
+              <button class="expand-btn">
+                Training <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="expand-content">
+                <p>
+                  Ventura Center for Dispute Settlement - Mediation Training -
+                  2013
+                </p>
+                <p>Ventura County Superior Court - Mediation Training - 2013</p>
+                <p>NETI Negotiation Training - 2017</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mediation">
+        <div class="mediation-top">
+          <h3>Why Mediation?</h3>
+          <hr />
+        </div>
+        <div class="mediation-wrapper">
+          <div class="mediation-text">
+            <p>
+              Mediation is a voluntary, confidential process in which a neutral
+              third party helps the parties resolve their disputes. As a
+              mediator, I have training and experience in techniques that
+              facilitate the parties evaluation of their issues and options in
+              order to achieve a settlement.
+            </p>
+
+            <p>
+              As part of the mediation process, each party can provide the
+              mediator with mediation statements and documents that present the
+              partys positions and interests. The mediator may communicate with
+              the parties prior to the mediation session to obtain additional
+              information or discuss the details of the mediation session.
+              During the mediation session, the mediator may meet separately
+              with each party, as well as bringing the parties together to
+              engage in settlement negotiations. If a settlement is reached, the
+              parties will put the terms of the settlement in a written binding
+              agreement.
+            </p>
+            <p>
+              As an attorney, I value the mediation process. As a mediator, I
+              enjoy the opportunity to assist the parties in arriving at
+              voluntary and mutually agreeable resolutions. The mediation
+              process may avoid the need for costly and time-consuming
+              litigation in which a judge decides the outcome.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Get all expand buttons
+        const expandBtns = document.querySelectorAll(".expand-btn");
+
+        // Add click event listener to each button
+        expandBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Get the next sibling which is the expand-content div
+            const content = this.nextElementSibling;
+
+            // Toggle the active class on both button and content
+            this.classList.toggle("active");
+            content.classList.toggle("active");
+          });
+        });
+      </script>
+    </div>
+    <div id="footer">
+      <script>
+        fetch("../templates/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      </script>
+    </div>
+  </body>
+</html>

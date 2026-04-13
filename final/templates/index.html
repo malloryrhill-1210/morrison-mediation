@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Morrison Mediation</title>
+    <!-- TODO: add dynamic style generation -->
+    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <script>
+        fetch("../templates/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header").innerHTML = data;
+          });
+      </script>
+    </div>
+
+    <div class="page">
+      <!-- Page hero start -->
+      <div class="page-hero">
+        <div class="heroitemtext">
+          <h1 class="heroh1">Mediation that will change your life.</h1>
+          <p class="herop">
+            Services for the community and all those families and friends
+            involved.
+          </p>
+        </div>
+        <a href="contact.html" class="btn"> Schedule a Consultation</a>
+      </div>
+      <!-- Page hero end -->
+
+      <div class="services">
+        <div class="services-txt">
+          <h2 class="services-h2">We are here to help.</h2>
+          <p class="services-p">
+            See the list of our services. Mainly focusing on Mediation and can
+            be applied to a range of functions.
+          </p>
+        </div>
+
+        <div class="serv_boxes">
+          <div class="serv_box">
+            <p class="serv_title">Mediation</p>
+            <p class="serv_content">
+              Mediation is a process wherein the parties meet with a mutually
+              selected impartial and neutral person who assists them in the
+              negotiation of their differences.
+            </p>
+            <a href="#" class="btn"> Learn More</a>
+          </div>
+          <div class="serv_box">
+            <p class="serv_title">Online Dispute Resolution</p>
+            <p class="serv_content">
+              Online dispute resolution (ODR) is a form of dispute resolution
+              which uses technology to facilitate the resolution of disputes
+              between parties. It primarily involves negotiation, mediation or
+              arbitration, or a combination of all three. Equivalent to ADR.
+            </p>
+            <a href="#" class="btn"> Learn More</a>
+          </div>
+          <div class="serv_box">
+            <p class="serv_title">Arbitration</p>
+            <p class="serv_content">
+              Arbitration is the most traditional form of private dispute
+              resolution. Arbitration is a binding procedure. It is often
+              "administered" by a private organization that maintains lists of
+              available arbitrators and provide rules under which the
+              arbitration will be conducted.
+            </p>
+            <a href="#" class="btn"> Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
+        <div class="img-about">
+          <img class="img" src="../assets/about_pic1.jpeg" alt="about pic1" />
+        </div>
+        <div class="about-txt">
+          <h2 class="about-h2">About the Founder</h2>
+          <p class="about-p">
+            Sarah Morrison is a mediator with MVP and Resolve and Ventura County
+            Superior Court. She is an attorney with more than 30 years of
+            litigation and settlement negotiation experience. Sarah is committed
+            to the mediation process and facilitating parties reach resolution
+            of disputes using effective negotiation techniques. Sarah has
+            experience in resolving a wide range of legal disputes, including
+            environmental law, UCL, FEHA, nuisance, discrimination, employment
+            and property damage claims.
+          </p>
+          <div><a href="about.html" class="btn">Learn More</a></div>
+        </div>
+      </div>
+
+      <!-- <div class="process">
+        <div class="process-txt">
+          <h2 class="process-h2">Our Process</h2>
+          <p class="process-p">
+            Mediation is a voluntary, confidential process in which a neutral
+            third party helps the parties resolve their disputes. As a mediator,
+            I have training and experience in techniques that facilitate the
+            parties evaluation of their issues and options in order to achieve a
+            settlement.
+          </p>
+        </div>
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          <div id="timeline"></div>
+        </div>
+      </div> -->
+
+      <div class="pre-footer-wrapper">
+        <div class="pre-footer">
+          <h2 class="process-h2">Ready to get started? Talk to us today.</h2>
+          <div><a href="contact.html" class="btn">Get Started</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <script>
+        fetch("../templates/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      </script>
+    </div>
+
+    <script>
+      // Node data with descriptions
+      const nodes = [
+        {
+          id: 1,
+          label: "Discovery  Call",
+          description:
+            "First processing step where data is collected and validated.",
+        },
+        {
+          id: 2,
+          label: "Work Out Info",
+          description:
+            "Second processing step where data transformation occurs.",
+        },
+        {
+          id: 3,
+          label: "Final Call Analysis",
+          description:
+            "Deep analysis phase where insights are extracted from the data.",
+        },
+        {
+          id: 4,
+          label: "Agreement",
+          description:
+            "Quality review and validation checkpoint before final output.",
+        },
+      ];
+
+      const timeline = document.getElementById("timeline");
+
+      // Create timeline items
+      nodes.forEach((node, index) => {
+        const isLeft = index % 2 === 0;
+
+        // Create timeline item
+        const item = document.createElement("div");
+        item.className = `timeline-item ${isLeft ? "left" : "right"}`;
+
+        // Create card
+        const card = document.createElement("div");
+        card.className = "timeline-card";
+        card.innerHTML = `
+                <div class="card-header">
+                    <h3 class="card-title">${node.label}</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="card-description">
+                    <p>${node.description}</p>
+                </div>
+            `;
+
+        // Create dot
+        const dot = document.createElement("div");
+        dot.className = "timeline-dot";
+        dot.innerHTML = `<span>${node.id}</span>`;
+
+        // Add accordion click event
+        card.addEventListener("click", () => {
+          const isExpanded = card.classList.contains("expanded");
+
+          // Close all other cards
+          document.querySelectorAll(".timeline-card").forEach((c) => {
+            c.classList.remove("expanded");
+            c.querySelector(".expand-icon").textContent = "+";
+          });
+
+          // Toggle current card
+          if (!isExpanded) {
+            card.classList.add("expanded");
+            card.querySelector(".expand-icon").textContent = "−";
+          }
+        });
+
+        // Assemble
+        item.appendChild(card);
+        item.appendChild(dot);
+        timeline.appendChild(item);
+      });
+    </script>
+  </body>
+</html>
