@@ -113,7 +113,7 @@ ul {
   padding: 20px 30px;
   color: rgba(255, 255, 255, 0.75);
   transition: all 0.2s ease;
-  font-size: inherit;
+  font-size: 14px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -288,9 +288,10 @@ ul {
   padding: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
-  gap: 300px;
+  /* gap: 300px; */
+  
   max-width: 1440px;
   margin: 0 auto;
   min-height: 200px;
