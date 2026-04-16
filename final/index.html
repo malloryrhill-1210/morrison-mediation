@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,  minimum-scale=5.0,"
+    />
+    <title>Morrison Mediation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <script>
+        fetch("header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header").innerHTML = data;
+          });
+      </script>
+    </div>
+
+    <div class="page">
+      <div class="content__wrapper">
+        <div class="hero">
+          <h1>Morrison Mediation</h1>
+          <a href="contact.html" class="btn"> Schedule a Consultation</a>
+        </div>
+
+        <!-- Page hero end -->
+
+        <div class="about">
+          <div class="img">
+            <img
+              class="about__img"
+              src="assets/about_pic1.jpeg"
+              alt="about__img"
+            />
+          </div>
+          <div class="text">
+            <h2>Sarah Morrison</h2>
+            <div class="paragraphs">
+              <p>
+                Sarah Morrison is a mediator and attorney with more than 30
+                years of litigation and settlement negotiation experience. Sarah
+                is committed to the mediation process and facilitating parties
+                reach resolution of disputes using effective negotiation
+                techniques. Sarah has experience in resolving a wide range of
+                legal disputes, including environmental law, Unfair Competition
+                Law, nuisance, discrimination, employment and property damage
+                claims.
+              </p>
+            </div>
+
+            <div><a href="about.html" class="btn">Learn More</a></div>
+          </div>
+        </div>
+        <!-- <div class="about">
+          <div class="text_2">
+            <h2>Ready to get started?</h2>
+            <p>
+              Click below to schedule a free consultation and learn about the
+              services Sarah offers
+            </p>
+            <div><a href="about.html" class="btn">Learn More</a></div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div id="footer">
+      <script>
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      </script>
+    </div>
+  </body>
+</html>

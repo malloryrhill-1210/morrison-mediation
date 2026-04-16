@@ -15,6 +15,7 @@ body {
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
+  background-color: #afc0cb;
 }
 
 
@@ -38,7 +39,7 @@ body {
   border-radius: 40px;
   max-width: 925px;
   max-height: 651px;
-  padding: 50px;
+  padding: 50px;  
   gap: 50px;
 }
 

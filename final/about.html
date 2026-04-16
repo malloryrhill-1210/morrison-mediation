@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,  minimum-scale=5.0,"
+    />
+    <link rel="stylesheet" href="static/styles.css" />
+    <title>Morrison Mediation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <script>
+        // Load header
+        fetch("header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header").innerHTML = data;
+          });
+      </script>
+    </div>
+
+    <div class="about__page">
+      <div class="content__wrapper">
+        <h1>Sarah Morrison, Mediator</h1>
+        <div class="box">
+          <div class="img">
+            <img
+              class="about__img"
+              src="assets/morrison_mediation_hike.JPG"
+              alt="about__img"
+            />
+          </div>
+          <div class="text">
+            <h2>About Sarah Morrison</h2>
+            <p>
+              Sarah Morrison is a trained mediator and attorney with many years
+              of experience in settlement negotiations. Particular areas of
+              legal knowledge and experience include: litigation, environmental
+              law, consumer laws including the Unfair Competition Law,
+              discrimination and civil rights laws, land use and property law.
+            </p>
+            <br />
+            <p>
+              Particular areas of legal knowledge and experience include:
+              litigation, environmental law, consumer laws including the Unfair
+              Competition Law, discrimination and civil rights laws, land use
+              and property law.
+            </p>
+          </div>
+        </div>
+
+        <div class="background">
+          <h2 class="title">Background</h2>
+        </div>
+        <!-- <div class="info__text">
+          <h3>
+            Sarah Morrison is a thoughtful and dedicated mediator. She is ready
+            to take on your mediation challenge.
+          </h3> -->
+        <!-- </div> -->
+        <div class="info">
+          <div class="expandable__wrapper">
+            <div class="expandable">
+              <button class="btn">
+                Professional Experience <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="content">
+                <p>
+                  Mediation Volunteer Panel Member - Los Angeles Superior Court
+                  MVP Panel (2020-Present)
+                </p>
+                <p>
+                  Resolve Los Angeles County Superior Court - Settlement Officer
+                  (2017-2020)
+                </p>
+                <p>
+                  Center for Dispute Resolution Panel - Mediator in Ventura
+                  County Superior Court Small Claims (2015-2017)
+                </p>
+                <p>
+                  Los Angeles County Bar Association ADR Section Member
+                  (2015-2017)
+                </p>
+                <p>
+                  California Attorney General's Office - Supervising Deputy
+                  Attorney General (2014-2025)
+                </p>
+                <p>
+                  California Attorney General's Office - Deputy Attorney General
+                  (1995-2014)
+                </p>
+                <p>
+                  Department of Toxic Substances Control - Staff Counsel
+                  (1994-1995)
+                </p>
+                <p>Sidley & Austin - Associate (1992-1994)</p>
+                <p>McKenna Connor and Cuneo - Associate (1989-1992)</p>
+              </div>
+            </div>
+            <div class="expandable">
+              <button class="btn">
+                Education <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="content">
+                <p>JD - Harvard Law School (1960-1963)</p>
+                <p>BA in Government - Pomona College (1956-1960)</p>
+              </div>
+            </div>
+            <div class="expandable">
+              <button class="btn">
+                Training <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="content">
+                <p>
+                  Ventura Center for Dispute Settlement - Mediation Training -
+                  2013
+                </p>
+                <p>NETI Negotiation Training - 2017</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <script>
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      </script>
+    </div>
+
+    <script>
+      // Get all expand buttons
+      const expandBtns = document.querySelectorAll(
+        ".about__page .content__wrapper .info .expandable__wrapper .expandable .btn",
+      );
+
+      // Add click event listener to each button
+      expandBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          // Get the next sibling which is the content div
+          const content = this.nextElementSibling;
+
+          // Toggle the active class on both button and content
+          this.classList.toggle("active");
+          content.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

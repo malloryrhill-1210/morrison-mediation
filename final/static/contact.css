@@ -27,7 +27,13 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  background: linear-gradient(to top, #57575e24 0%, #37333324 40%, rgb(121, 148, 193) 60%, rgb(121, 148, 193) 100%);
+  background: linear-gradient(
+    to top,
+    #57575e24 0%,
+    #37333324 40%,
+    rgb(121, 148, 193) 60%,
+    rgb(121, 148, 193) 100%
+  );
 }
 
 .contact-top {
@@ -121,4 +127,23 @@ textarea {
   border-radius: 20px;
 }
 
+.contact-content .btn {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  margin: 0 auto;
+  background-color: #62717c;
+  padding: 10px 16px;
+  border-radius: 1000px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 30%;
+  text-align: center;
+  /* text-transform: uppercase; */
+}
 
+.contact-content .btn:focus,
+.contact-content .btn:hover {
+  background-color: #4e5b64;
+  color: rgba(255, 255, 255, 1);
+}
